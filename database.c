@@ -315,7 +315,7 @@ static retvalue database_opentable(const char *filename, /*@null@*/const char *s
 		}
 	}
 
-#if DB_VERSION_MAJOR == 5 || DB_VERSION_MAJOR == 6
+#if DB_VERSION_MAJOR == 5 || DB_VERSION_MAJOR == 18
 #define DB_OPEN(database, filename, name, type, flags) \
 	database->open(database, NULL, filename, name, type, flags, 0664)
 #else
